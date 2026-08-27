@@ -12,60 +12,60 @@
     <header class="topbar">
       <div class="brand"><span class="brand-mark">B</span><span>BLACKJACK <b>ROYALE</b></span></div>
       <div class="stats">
-        <div><span>׳™׳×׳¨׳”</span><strong id="balance">ג‚×1,000</strong></div>
-        <div><span>׳”׳™׳׳•׳¨</span><strong id="current-bet">ג‚×0</strong></div>
-        <button id="sound-toggle" class="icon-btn" aria-label="׳›׳™׳‘׳•׳™ ׳¦׳׳™׳׳™׳" title="׳¦׳׳™׳׳™׳">ג™×</button>
-        <button id="help-toggle" class="icon-btn" aria-label="׳”׳¦׳’׳× ׳—׳•׳§׳™׳" title="׳—׳•׳§׳™׳">?</button>
+        <div><span>יתרה</span><strong id="balance">₪1,000</strong></div>
+        <div><span>הימור</span><strong id="current-bet">₪0</strong></div>
+        <button id="sound-toggle" class="icon-btn" aria-label="כיבוי צלילים" title="צלילים">♪</button>
+        <button id="help-toggle" class="icon-btn" aria-label="הצגת חוקים" title="חוקים">?</button>
       </div>
     </header>
 
-    <section class="table" aria-label="׳©׳•׳׳—׳ ׳‘׳׳׳§ ׳’'׳§">
+    <section class="table" aria-label="שולחן בלאק ג'ק">
       <div class="dealer-zone zone">
-        <div class="hand-title"><span>׳“׳™׳׳¨</span><output id="dealer-score" class="score"></output></div>
+        <div class="hand-title"><span>דילר</span><output id="dealer-score" class="score"></output></div>
         <div id="dealer-cards" class="cards"></div>
       </div>
 
       <div class="table-rules">
         <strong>BLACKJACK PAYS 3 TO 2</strong>
-        <span>Dealer stands on 17 ֲ· Insurance pays 2 to 1</span>
+        <span>Dealer stands on 17 · Insurance pays 2 to 1</span>
       </div>
 
       <div class="player-zone zone">
         <div id="hands" class="hands"></div>
       </div>
 
-      <aside id="message" class="message" aria-live="polite">׳‘׳—׳¨׳• ׳–'׳™׳˜׳•׳ ׳™׳ ׳•׳”׳ ׳™׳—׳• ׳”׳™׳׳•׳¨</aside>
+      <aside id="message" class="message" aria-live="polite">בחרו ז'יטונים והניחו הימור</aside>
 
       <div id="betting-panel" class="betting-panel">
-        <button class="chip chip-5" data-value="5" aria-label="׳”׳•׳¡׳£ 5 ׳©׳§׳׳™׳">5</button>
-        <button class="chip chip-25" data-value="25" aria-label="׳”׳•׳¡׳£ 25 ׳©׳§׳׳™׳">25</button>
-        <button class="chip chip-50" data-value="50" aria-label="׳”׳•׳¡׳£ 50 ׳©׳§׳׳™׳">50</button>
-        <button class="chip chip-100" data-value="100" aria-label="׳”׳•׳¡׳£ 100 ׳©׳§׳׳™׳">100</button>
-        <button id="clear-bet" class="text-btn">׳ ׳§׳”</button>
-        <button id="deal" class="primary-btn">׳—׳׳§ ׳§׳׳₪׳™׳</button>
+        <button class="chip chip-5" data-value="5" aria-label="הוסף 5 שקלים">5</button>
+        <button class="chip chip-25" data-value="25" aria-label="הוסף 25 שקלים">25</button>
+        <button class="chip chip-50" data-value="50" aria-label="הוסף 50 שקלים">50</button>
+        <button class="chip chip-100" data-value="100" aria-label="הוסף 100 שקלים">100</button>
+        <button id="clear-bet" class="text-btn">נקה</button>
+        <button id="deal" class="primary-btn">חלק קלפים</button>
       </div>
 
       <div id="play-actions" class="play-actions hidden">
-        <button id="hit" class="action-btn"><span class="action-icon">ן¼‹</span>׳§׳׳£</button>
-        <button id="stand" class="action-btn"><span class="action-icon">ג– </span>׳¢׳¦׳•׳¨</button>
-        <button id="double" class="action-btn"><span class="action-icon">ֳ—2</span>׳”׳›׳₪׳</button>
-        <button id="split" class="action-btn"><span class="action-icon">ג‡„</span>׳₪׳¦׳</button>
+        <button id="hit" class="action-btn"><span class="action-icon">＋</span>קלף</button>
+        <button id="stand" class="action-btn"><span class="action-icon">■</span>עצור</button>
+        <button id="double" class="action-btn"><span class="action-icon">×2</span>הכפל</button>
+        <button id="split" class="action-btn"><span class="action-icon">⇄</span>פצל</button>
       </div>
-      <button id="new-round" class="primary-btn new-round hidden">׳¡׳™׳‘׳•׳‘ ׳—׳“׳©</button>
+      <button id="new-round" class="primary-btn new-round hidden">סיבוב חדש</button>
     </section>
   </main>
 
   <dialog id="insurance-dialog">
-    <h2>׳‘׳™׳˜׳•׳—?</h2>
-    <p>׳׳“׳™׳׳¨ ׳™׳© ׳׳¡. ׳ ׳™׳×׳ ׳׳‘׳˜׳— ׳—׳¦׳™ ׳׳”׳”׳™׳׳•׳¨. ׳”׳‘׳™׳˜׳•׳— ׳׳©׳׳ 2:1.</p>
-    <div><button id="decline-insurance" class="text-btn">׳׳ ׳×׳•׳“׳”</button><button id="take-insurance" class="primary-btn">׳§׳— ׳‘׳™׳˜׳•׳—</button></div>
+    <h2>ביטוח?</h2>
+    <p>לדילר יש אס. ניתן לבטח חצי מההימור. הביטוח משלם 2:1.</p>
+    <div><button id="decline-insurance" class="text-btn">לא תודה</button><button id="take-insurance" class="primary-btn">קח ביטוח</button></div>
   </dialog>
 
   <dialog id="help-dialog">
-    <button id="close-help" class="dialog-close" aria-label="׳¡׳’׳•׳¨">ֳ—</button>
-    <h2>׳—׳•׳§׳™ ׳”׳©׳•׳׳—׳</h2>
-    <p>׳”׳׳˜׳¨׳” ׳”׳™׳ ׳׳”׳×׳§׳¨׳‘ ׳ײ¾21 ׳‘׳׳™ ׳׳¢׳‘׳•׳¨ ׳׳•׳×׳•, ׳•׳׳ ׳¦׳— ׳׳× ׳™׳“ ׳”׳“׳™׳׳¨.</p>
-    <ul><li>Blackjack ׳˜׳‘׳¢׳™ ׳׳©׳׳ 3:2.</li><li>׳”׳“׳™׳׳¨ ׳¢׳•׳׳“ ׳¢׳ ׳›׳ 17.</li><li>׳׳₪׳©׳¨ ׳׳”׳›׳₪׳™׳ ׳‘׳›׳ ׳©׳ ׳™ ׳§׳׳₪׳™׳.</li><li>׳׳₪׳©׳¨ ׳׳₪׳¦׳ ׳–׳•׳’ ׳₪׳¢׳ ׳׳—׳×; ׳׳¡׳™׳ ׳׳₪׳•׳¦׳׳™׳ ׳׳§׳‘׳׳™׳ ׳§׳׳£ ׳׳—׳“.</li><li>׳‘׳™׳˜׳•׳— ׳–׳׳™׳ ׳׳•׳ ׳׳¡ ׳•׳׳©׳׳ 2:1.</li></ul>
+    <button id="close-help" class="dialog-close" aria-label="סגור">×</button>
+    <h2>חוקי השולחן</h2>
+    <p>המטרה היא להתקרב ל־21 בלי לעבור אותו, ולנצח את יד הדילר.</p>
+    <ul><li>Blackjack טבעי משלם 3:2.</li><li>הדילר עומד על כל 17.</li><li>אפשר להכפיל בכל שני קלפים.</li><li>אפשר לפצל זוג פעם אחת; אסים מפוצלים מקבלים קלף אחד.</li><li>ביטוח זמין מול אס ומשלם 2:1.</li></ul>
   </dialog>
   <script src="src/game.js"></script>
 </body>
