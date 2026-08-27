@@ -1,0 +1,13 @@
+{
+  "name": "blackjack-royale",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Realistic browser blackjack game",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
+
