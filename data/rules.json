@@ -1,0 +1,12 @@
+{
+  "decks": 6,
+  "dealerHitsSoft17": false,
+  "blackjackPayout": 1.5,
+  "insurancePayout": 2,
+  "startingBalance": 1000,
+  "minimumBet": 5,
+  "maximumBet": 500,
+  "resplitAllowed": false,
+  "doubleAfterSplit": true
+}
+
