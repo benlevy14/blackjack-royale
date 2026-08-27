@@ -34,5 +34,6 @@ function settle(msg){state='settled';insurance=0;setView(state);setMessage(msg,t
 $('#new-round').onclick=()=>{bet=Math.min(hands[0]?.bet||RULES.minBet,balance,RULES.maxBet);hands=[];dealer=[];state='betting';setView(state);setMessage(balance>=RULES.minBet?'ההימור הקודם מוכן — אפשר לשנות או לחלק':"היתרה נגמרה — המשחק אופס");if(balance<RULES.minBet){balance=RULES.startingBalance;bet=0}render()};
 $('#sound-toggle').onclick=e=>{soundOn=!soundOn;e.currentTarget.textContent=soundOn?'♪':'×';e.currentTarget.setAttribute('aria-label',soundOn?'כיבוי צלילים':'הפעלת צלילים')};
 $('#help-toggle').onclick=()=>$('#help-dialog').showModal();$('#close-help').onclick=()=>$('#help-dialog').close();
-createShoe();setView('betting');render();
+$('#enter-game').onclick=()=>{$('#welcome-dialog').close();beep(620,.1)};
+createShoe();setView('betting');render();$('#welcome-dialog').showModal();
 
