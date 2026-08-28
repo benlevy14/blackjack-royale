@@ -12,7 +12,8 @@ const mimeTypes = {
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
   '.png': 'image/png',
-  '.svg': 'image/svg+xml'
+  '.svg': 'image/svg+xml',
+  '.ogg': 'audio/ogg'
 };
 
 const server = http.createServer((request, response) => {
@@ -33,7 +34,9 @@ const server = http.createServer((request, response) => {
 
     response.writeHead(200, {
       'Content-Type': mimeTypes[path.extname(filePath).toLowerCase()] || 'application/octet-stream',
-      'Cache-Control': path.extname(filePath) === '.html' ? 'no-cache' : 'public, max-age=86400'
+      'Cache-Control': 'no-store, no-cache, must-revalidate',
+      'Pragma': 'no-cache',
+      'Expires': '0'
     });
     fs.createReadStream(filePath).pipe(response);
   });
@@ -42,4 +45,3 @@ const server = http.createServer((request, response) => {
 server.listen(port, '0.0.0.0', () => {
   console.log(`Blackjack Royale listening on port ${port}`);
 });
-
