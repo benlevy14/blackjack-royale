@@ -25,14 +25,16 @@
         <div id="dealer-cards" class="cards"></div>
       </div>
 
-      <div class="table-rules">
-        <strong>BLACKJACK PAYS 3 TO 2</strong>
-        <span>Dealer stands on 17 · Insurance pays 2 to 1</span>
-      </div>
-
       <div class="player-zone zone">
         <div id="hands" class="hands"></div>
       </div>
+
+      <section id="wager-display" class="wager-display" aria-label="ההימור בסיבוב">
+        <div class="wager-heading"><span>הימור בסיבוב</span><strong id="table-bet">₪0</strong></div>
+        <div id="wager-stacks" class="wager-stacks" aria-live="polite"></div>
+      </section>
+
+      <div id="outcome-fx" class="outcome-fx" aria-hidden="true"></div>
 
       <aside id="message" class="message" aria-live="polite">בחרו ז'יטונים והניחו הימור</aside>
 
@@ -41,6 +43,7 @@
         <button class="chip chip-25" data-value="25" aria-label="הוסף 25 שקלים">25</button>
         <button class="chip chip-50" data-value="50" aria-label="הוסף 50 שקלים">50</button>
         <button class="chip chip-100" data-value="100" aria-label="הוסף 100 שקלים">100</button>
+        <button id="undo-chip" class="text-btn" disabled>בטל</button>
         <button id="clear-bet" class="text-btn">נקה</button>
         <button id="deal" class="primary-btn">חלק קלפים</button>
       </div>
@@ -76,4 +79,3 @@
   <script src="src/game.js"></script>
 </body>
 </html>
-
